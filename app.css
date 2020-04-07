@@ -1,0 +1,238 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: rgb(255, 179, 37);
+  text-align: center;
+}
+
+.sec2 {
+  background-color: rgb(3, 189, 189);
+}
+
+.sec2 h4 {
+  color: rgb(3, 189, 189);
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 5px;
+  background-color: white;
+  font-weight: 700;
+}
+
+.sec3 {
+  background-color: rgb(48, 199, 61);
+}
+
+.sec3 h4 {
+  color: rgb(48, 199, 61);
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 5px;
+  background-color: white;
+  font-weight: 700;
+}
+
+.sec4 {
+  background-color: rgb(36, 147, 238);
+}
+
+.sec4 h4 {
+  color: rgb(36, 147, 238);
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 5px;
+  background-color: white;
+  font-weight: 700;
+}
+
+.sec5 {
+  background-color: rgb(207, 44, 15);
+}
+
+.sec5 h4 {
+  color: rgb(207, 44, 15);
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 5px;
+  background-color: white;
+  font-weight: 700;
+}
+
+#mainNavbar {
+  font-size: 1.3rem;
+  font-weight: 400;
+  height: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#mainNavbar .nav-link {
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+#mainNavbar .nav-link:hover {
+  color: black;
+  border-bottom: 1px solid black;
+  transition: 500ms;
+}
+
+#mainNavbar .navbar-brand {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.blurb h2 {
+  color: white;
+  font-size: 3rem;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.sec2 h4 {
+  color: rgb(3, 189, 189);
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 5px;
+  background-color: white;
+  font-weight: 700;
+}
+
+.blurb p {
+  color: white;
+  font-size: 1rem;
+  line-height: 2;
+  padding: 5%;
+  border: 4px solid white;
+  margin-right: 0;
+  background-color: rgba(250, 250, 250, 0.2);
+}
+
+.main-box {
+  border: 3px solid rgba(250, 250, 250, 0.7);
+  padding: 0;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.first-slick {
+  background-image: url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  background-size: cover;
+  background-position: center;
+  height: 35rem;
+}
+
+.second-slick {
+  background-image: url(https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  background-size: cover;
+  background-position: center;
+  height: 35rem;
+}
+
+.third-slick {
+  background-image: url(https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  background-size: cover;
+  background-position: center;
+  height: 35rem;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.dice-icon {
+  color: white;
+  margin-top: 3%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.fa-dice,
+.fa-utensils {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.dice-icon:hover {
+  color: black;
+}
+
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.search_input {
+  color: black;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 20px;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input {
+  width: 250px;
+  caret-color: black;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon {
+  background: transparent;
+  color: black;
+}
+
+.search_icon {
+  height: 40px;
+  width: 40px;
+  float: left;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  color: black;
+  text-decoration: none;
+}
+
+/*shaking effect*/
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.apply-shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.heartChange {
+  color: red;
+}
