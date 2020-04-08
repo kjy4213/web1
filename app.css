@@ -65,14 +65,17 @@ body {
 }
 
 #mainNavbar .nav-link {
-  color: white;
-  padding: 5px;
+  color: black;
+  margin: 5px;
   text-decoration: none;
+  transition: 500ms;
 }
 
 #mainNavbar .nav-link:hover {
-  color: black;
-  border-bottom: 1px solid black;
+  color: darkblue;
+  font-size: 30px;
+  /* border-bottom: 1px solid black; */
+  text-decoration: underline;
   transition: 500ms;
 }
 
@@ -153,6 +156,11 @@ body {
   display: inline-block;
   margin-bottom: 5px;
   margin-top: 10px;
+  animation-name: shake;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
 
 .fa-dice,
@@ -190,6 +198,7 @@ body {
   width: 250px;
   caret-color: black;
   transition: width 0.4s linear;
+  /* border-bottom: 1px solid #000; */
 }
 
 .searchbar:hover > .search_icon {
@@ -239,4 +248,37 @@ body {
 
 .heartChange {
   color: red;
+}
+
+/* 검색박스 구현 */
+#recommend {
+  position: absolute;
+  background: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.item {
+  height: 1.8em;
+  width: 270px;
+  outline: none;
+}
+
+.item:hover {
+  color: #9baec8;
+}
+.text {
+  font-weight: bold;
+}
+
+.invisible {
+  display: none;
+}
+
+.collapsing,
+.show {
+  background-color: white;
+  opacity: 0.9;
+  border: 1px solid #000;
+  padding: 20px;
 }
