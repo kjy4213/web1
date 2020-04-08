@@ -261,13 +261,15 @@ body {
   height: 1.8em;
   width: 270px;
   outline: none;
+  transition: 500ms;
+  margin-bottom: 1px;
 }
 
 .item:hover {
-  color: #9baec8;
-}
-.text {
-  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  font-size: 30px;
+  transition: 500ms;
 }
 
 .invisible {
