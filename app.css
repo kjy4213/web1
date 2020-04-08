@@ -146,6 +146,7 @@ body {
 }
 
 .dice-icon {
+  cursor: pointer;
   color: white;
   /* text-align: center; */
   /* font-weight: 400; */
