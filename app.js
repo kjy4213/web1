@@ -6,7 +6,6 @@ $("#fullpage").fullpage({
   navigationTooltips: ["메인메뉴", "한식", "중식", "양식", "일식"],
   // slidesNavigation: true,
   autoScrolling: true, // 자동으로 스크롤링
-  scrollHorizontally: true, // 수평으로 움직일지 여부
   navigation: true, // 네비게이션
   navigationPosition: "right", // 네비게이션 포지션
   slidesNavigation: true,
@@ -99,48 +98,66 @@ function random() {
 }
 
 // 검색박스 구현
-
 const inputBox = document.querySelector("input");
 const recommendBox = document.querySelector("#recommend");
 const texts = document.querySelectorAll(".text");
 const searchbar = document.querySelector(".h-100");
-var p = null;
+
+for (let i = 0; i < list.length; i++) {
+  var p = `<div class="item"><span class="text${i}">${list[i]}</span></div>`;
+  $("#recommend").append(p);
+
+  if (i < 5) {
+    $(".text" + i).on("click", function (e) {
+      location.href = "#kor/food" + (i + 1);
+    });
+  } else if (i < 10) {
+    $(".text" + i).on("click", function (e) {
+      location.href = "#ch/food" + (i + 1);
+    });
+  } else if (i < 15) {
+    $(".text" + i).on("click", function (e) {
+      location.href = "#it/food" + (i + 1);
+    });
+  } else {
+    $(".text" + i).on("click", function (e) {
+      location.href = "#jp/food" + (i + 1);
+    });
+  }
+}
+
+inputBox.addEventListener("click", (e) => {
+  recommendBox.classList.remove("invisible");
+});
+
 inputBox.addEventListener("keyup", (e) => {
-  if (e.target.value.length > 0) {
-    recommendBox.classList.remove("invisible");
-    // list.forEach((menu) => {
-    //   if (menu.indexOf(e.target.value)!=-1) {
-    //     texts.forEach((textEl) => {
-    //       textEl.textContent = menu;
-    //     })
-    //   }
-    // })
-    $(".item").remove();
-    for (let i = 0; i < list.length; i++) {
-      if (list[i].indexOf(e.target.value) != -1) {
-        p = `<div class="item"><span class="text${i}">${list[i]}</span></div>`;
-        $("#recommend").append(p);
-        $(".text" + i).on("click", function () {
-          location.href = "#food" + (i + 1);
-        });
-      }
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].indexOf(e.target.value) == -1) {
+      $(".text" + i)
+        .parent()
+        .addClass("invisible");
+    } else {
+      $(".text" + i)
+        .parent()
+        .removeClass("invisible");
     }
   }
+});
 
-  // 검색바에서 마우스가 떠나면 검색창이 사라지게 하는 이벤트
-  searchbar.addEventListener("mouseleave", (event) => {
-    recommendBox.classList.add("invisible");
-  });
+searchbar.addEventListener("mouseleave", (event) => {
+  recommendBox.classList.add("invisible");
 });
 
 $(window).resize(function () {
   // width값을 가져오기
   var width_size = window.outerWidth;
+  size(width_size);
+});
 
-  // 800 이하인지 if문으로 확인
-  if (width_size <= 756) {
+var size = function (width_size) {
+  if (width_size <= 1007) {
     $(".desc").children().addClass("scroll");
-  } else if (width_size > 756) {
+  } else if (width_size > 1007) {
     $(".desc").children().removeClass("scroll");
   }
-});
+};
