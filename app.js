@@ -149,6 +149,7 @@ searchbar.addEventListener("mouseleave", (event) => {
 });
 
 $(window).resize(function () {
+  $(".navbar-collapse").removeClass("show");
   // width값을 가져오기
   var width_size = window.outerWidth;
   size(width_size);
