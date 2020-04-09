@@ -201,7 +201,7 @@ body {
 }
 
 .searchbar:hover > .search_input {
-  width: 200px;
+  width: 250px;
   caret-color: black;
   transition: width 0.4s linear;
 }
