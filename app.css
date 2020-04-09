@@ -155,27 +155,29 @@ body {
   /* font-weight: 400; */
   display: inline-block;
   margin-bottom: 5px;
-  margin-top: 10px;
+  margin-top: 20px;
   animation-name: shake;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-direction: alternate;
-  border: 4px solid #000;
-  padding: 10px;
-  background-color: orangered;
+  /* 추가한 부분 */
+  border: 3px solid white;
+  padding: 20px;
+  background-color: rgb(255, 179, 37);
   border-radius: 20px;
+  /* //추가한 부분 */
 }
 
 .fa-dice,
 .fa-utensils {
   font-size: 3.5rem;
   margin-bottom: 10px;
-  margin-top: 50px;
 }
 
 .dice-icon:hover {
   color: black;
+  border: 3px solid black;
 }
 
 .searchbar {
@@ -199,7 +201,7 @@ body {
 }
 
 .searchbar:hover > .search_input {
-  width: 250px;
+  width: 200px;
   caret-color: black;
   transition: width 0.4s linear;
 }
@@ -301,4 +303,8 @@ body {
 
 .desc p.scroll:hover {
   overflow-y: scroll;
+}
+
+.fullpage-wrapper {
+  height: 100%;
 }
